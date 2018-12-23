@@ -1,0 +1,23 @@
+.fill {
+	height: 100%;
+}
+
+.fill_8 {
+	height: 80%;
+}
+
+.fill_2 {
+	height: 20%;
+}
+
+.part1 {
+	height: 100%; 
+	min-height: 500px; 
+	width: 100%;
+}
+
+.part2 {
+	height: 100%; 
+	min-height: 500px; 
+	width: 100%;
+}
