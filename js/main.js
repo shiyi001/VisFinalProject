@@ -3,6 +3,20 @@ $(document).ready(function() {
 	drawFirstPart();
 
 	drawSecondPart();
+
+	var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      freeMode: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
 })
 
 function drawFirstPart() {
@@ -22,6 +36,11 @@ function drawFirstPart() {
     
     var myChart = echarts.init(document.getElementById('part1'));
     
+ 	//必须，绑定图表自适应功能
+    window.onresize = function () {
+    	myChart.resize(); //使第一个图表适应
+    }
+
     myChart.setOption(option, true);
 }
 
