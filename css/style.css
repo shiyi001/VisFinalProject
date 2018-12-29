@@ -58,3 +58,25 @@
 	min-height: 500px; 
 	width: 100%;
 }
+
+.arrow {
+	position: absolute;
+	top: 10%;
+	width: 30%;
+	height: 40%;
+	font-size: 108px;
+	font-weight: bold;
+	line-height: 39px;
+	text-align: center;
+	color: #fff;
+	background-color: RGBA(0, 0, 0, .3);
+	cursor: pointer;
+}
+
+#prev {
+	left: 30%;
+}
+
+#next {
+	right: 30%;
+}
