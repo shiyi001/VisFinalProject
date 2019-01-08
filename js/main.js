@@ -81,7 +81,7 @@ function getnowtooltip(nownode)
 }
 function getnowDes()
 {
-	NBdes="This is "+currYear.toString()+":<br/>";
+	NBdes = currYear.toString() + "年诺贝尔奖:<br/>";
 	tag=currYear-startYear
 	nodes=NBdata[tag]
 	var res = [];
@@ -164,7 +164,7 @@ myChart1_option = {
    },
 
     title: {
-		text: '不知道标题起什么名字',
+		text: '诺贝尔奖分布图',
 		textStyle: {
 			color: 'black',
 			fontSize: 20
@@ -230,7 +230,7 @@ myChart2_option = {
 };
 
 myChart2.setOption(myChart2_option, true);
- myChart1.setOption(myChart1_option, true);
+myChart1.setOption(myChart1_option, true);
 var prev = document.getElementById('prev');
 prev.onclick = function() {
 	currYear = currYear - 1;
@@ -414,16 +414,21 @@ function draw()
     myChart2.setOption({
         yAxis: {
             data: data.years[currYear].country,
-            inverse:true
+            inverse: true
             // reverse:True
             // data:['美国','中国']
+        },
+        xAxis: {
+            type: 'log',
         },
         series: [{
             // 根据名字对应到相应的系列
             name: '获奖人数',
             type: 'bar',
-            data: data.years[currYear].number,
-            itemStyle:itemStyle,
+            data: data.years[currYear].number.map(
+                    function(x) {return x+1;}
+                ),
+            itemStyle: itemStyle,
             label: {
                 normal: {
                     show: true,
@@ -432,10 +437,13 @@ function draw()
                     // position: ['50%', '50%'],
                     color:'#fff',
                     fontSize:16,
-                    formatter:"{b} {c}"
+                    formatter: function(param) {
+                            //console.log(param);
+                            return param.name + " " + (param.value - 1).toString();
+                        }
                     }
                 },
-            color:function(param){
+            color: function(param){
                     if (param.name =="美国"){
                         return '#C1232B';
                     }else if (param.name =="英国"){

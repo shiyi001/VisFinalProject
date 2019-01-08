@@ -60,17 +60,19 @@
 }
 
 .arrow {
-	position: absolute;
-	top: 10%;
-	width: 30%;
-	height: 40%;
 	font-size: 108px;
 	font-weight: bold;
 	line-height: 39px;
-	text-align: center;
 	color: #fff;
 	background-color: RGBA(0, 0, 0, .3);
 	cursor: pointer;
+}
+
+.img{
+	width: 100%; 
+	height: auto;
+	max-width: 100%; 
+	display: block;
 }
 
 #prev {
