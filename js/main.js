@@ -8,11 +8,15 @@ var endYear = 2018;
 
 var part1_comp = document.getElementById('part1');
 var part2_comp = document.getElementById('part2');
+var about_part1 = document.getElementById('about_part1');
+var about_part2 = document.getElementById('about_part2');
+var about_part3 = document.getElementById('about_part3');
 
 var myChart1 = echarts.init(part1_comp);
 var myChart2 = echarts.init(part2_comp);
-
-
+var my_about_part1 = echarts.init(about_part1);
+var my_about_part2 = echarts.init(about_part2);
+var my_about_part3 = echarts.init(about_part3);
 
 //chart1 data import from data.js
 var NBdata=getNBdata();
@@ -101,7 +105,79 @@ function getnowDes()
      return NBdes;
 }
 
+//This is option set for test
+test_option = {
+    backgroundColor: '#2c343c',
 
+    title: {
+        text: 'Customized Pie',
+        left: 'center',
+        top: 20,
+        textStyle: {
+            color: '#ccc'
+        }
+    },
+
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+
+    visualMap: {
+        show: false,
+        min: 80,
+        max: 600,
+        inRange: {
+            colorLightness: [0, 1]
+        }
+    },
+    series : [
+        {
+            name:'访问来源',
+            type:'pie',
+            radius : '55%',
+            center: ['50%', '50%'],
+            data:[
+                {value:335, name:'直接访问'},
+                {value:310, name:'邮件营销'},
+                {value:274, name:'联盟广告'},
+                {value:235, name:'视频广告'},
+                {value:400, name:'搜索引擎'}
+            ].sort(function (a, b) { return a.value - b.value; }),
+            roseType: 'radius',
+            label: {
+                normal: {
+                    textStyle: {
+                        color: 'rgba(255, 255, 255, 0.3)'
+                    }
+                }
+            },
+            labelLine: {
+                normal: {
+                    lineStyle: {
+                        color: 'rgba(255, 255, 255, 0.3)'
+                    },
+                    smooth: 0.2,
+                    length: 10,
+                    length2: 20
+                }
+            },
+            itemStyle: {
+                normal: {
+                    color: '#c23531',
+                    shadowBlur: 200,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            },
+
+            animationType: 'scale',
+            animationEasing: 'elasticOut',
+            animationDelay: function (idx) {
+                return Math.random() * 200;
+            }
+        }
+    ]
+};
 
 // var data={
 //     "years":{
@@ -480,6 +556,9 @@ function draw()
         }]
     });
    
+   my_about_part1.setOption(test_option);
+   my_about_part2.setOption(test_option);
+   my_about_part3.setOption(test_option);
     
 	//alert(currYear);
 	des=getnowDes()
@@ -492,6 +571,9 @@ $(document).ready(function() {
     window.onresize = function () {
     	myChart1.resize(); 
     	myChart2.resize();
+        my_about_part1.resize();
+        my_about_part2.resize();
+        my_about_part3.resize();
     }    
 })
 
@@ -502,3 +584,13 @@ function play() {
     }, 3000)
 }
 play();
+
+function nav_onclick_all() {
+    document.getElementById("all").className = "nav-link active";
+    document.getElementById("about").className = "nav-link";
+}
+
+function nav_onclick_about() {
+    document.getElementById("all").className = "nav-link";
+    document.getElementById("about").className = "nav-link active";
+}

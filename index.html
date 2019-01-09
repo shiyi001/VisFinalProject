@@ -7,7 +7,25 @@
     <link rel="stylesheet" href="./css/swiper.min.css">
 </head>
 
-<body class="fill">
+<body>
+	
+	<!--This is a navbar-->
+	<ul class="nav nav-pills nav-fill fixed-top">
+	  <li class="nav-item">
+	    <a id="all" class="nav-link active" onclick="nav_onclick_all();" href="#">诺贝尔奖总览</a>
+	  </li>
+	  <li class="nav-item">
+	    <a id="about" class="nav-link" onclick="nav_onclick_about();" href="#ABOUT">关于诺奖</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link" href="#">诺奖之最</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link" href="#">关于作者</a>
+	  </li>
+	</ul>
+	<br/><br/>
+
 	<div class="container-fluid fill">
 		<div class="row" style="height:70%">
 			<div class="col-md-8 col-sm-8 col-xs-12">
@@ -57,38 +75,37 @@
 					</a>
 				</div>
 			</div>
+		</div>
+	</div>
 
-			<!--This is swiper implementation-->
-			<!--
-			<div class="col-md-12 col-sm-12 col-xs-12">
-
-		      	<div class="swiper-container">
-				    <div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<button type="button" class="btn btn-info" style="height: 114px">2000年诺贝尔奖</button>
-						</div>
-						<div class="swiper-slide">
-							<button type="button" class="btn btn-info" style="height: 114px">2001年诺贝尔奖</button>
-						</div>
-						<div class="swiper-slide">
-							<button type="button" class="btn btn-info" style="height: 114px">2002年诺贝尔奖</button>
-						</div>
-						<div class="swiper-slide">
-							<button type="button" class="btn btn-info" style="height: 114px">2003年诺贝尔奖</button>
-						</div>
-						<div class="swiper-slide">
-							<button type="button" class="btn btn-info" style="height: 114px">2004年诺贝尔奖</button>
-						</div>
-						<div class="swiper-slide">
-							<button type="button" class="btn btn-info" style="height: 114px">2005年诺贝尔奖</button>
-						</div>
-				    </div>
-    				<div class="swiper-button-next"></div>
-    				<div class="swiper-button-prev"></div>
-				</div>
-				
-		    </div>
-			-->
+	<span id="ABOUT" name="ABOUT"></span>
+	<!--等内容完善可以把这些空行删掉，只保留一个-->
+	<br/>
+	<div class="container-fluid fill">
+		<div class="row">
+			<div class="col-md-2 col-sm-2 col-xs-12"></div>
+			<div class="col-md-8 col-sm-8 col-xs-12">
+				<p>诺贝尔奖（The Nobel Prize），是以瑞典著名的化学家、硝化甘油炸药的发明人阿尔弗雷德·贝恩哈德·诺贝尔（Alfred Bernhard Nobel）的部分遗产（3100万瑞典克朗）作为基金在1895年创立的。 [1-2]  在世界范围内，诺贝尔奖通常被认为是所颁奖的领域内最重要的奖项。</p>
+			</div>
+			<div class="col-md-2 col-sm-2 col-xs-12"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-4 col-sm-4 col-xs-12">
+				<div id="about_part1" style="height: auto; min-height: 550px; width:100%"></div>
+			</div>
+			<div class="col-md-4 col-sm-4 col-xs-12">
+				<div id="about_part2" style="height: auto; min-height: 550px; width:100%"></div>
+			</div>
+			<div class="col-md-4 col-sm-4 col-xs-12">
+				<div id="about_part3" style="height: auto; min-height: 550px; width:100%"></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2 col-sm-2 col-xs-12"></div>
+			<div class="col-md-8 col-sm-8 col-xs-12">
+				<p>诺贝尔奖（The Nobel Prize），是以瑞典著名的化学家、硝化甘油炸药的发明人阿尔弗雷德·贝恩哈德·诺贝尔（Alfred Bernhard Nobel）的部分遗产（3100万瑞典克朗）作为基金在1895年创立的。 [1-2]  在世界范围内，诺贝尔奖通常被认为是所颁奖的领域内最重要的奖项。</p>
+			</div>
+			<div class="col-md-2 col-sm-2 col-xs-12"></div>
 		</div>
 	</div>
 
