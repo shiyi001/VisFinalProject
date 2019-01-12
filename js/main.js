@@ -1,7 +1,4 @@
 
-
-
-
 var currYear = 1901;
 var startYear = 1901;
 var endYear = 2018;
@@ -11,12 +8,17 @@ var part2_comp = document.getElementById('part2');
 var about_part1 = document.getElementById('about_part1');
 var about_part2 = document.getElementById('about_part2');
 var about_part3 = document.getElementById('about_part3');
+var about_part4 = document.getElementById('about_part4');
+var about_part5 = document.getElementById('about_part5');
 
 var myChart1 = echarts.init(part1_comp);
 var myChart2 = echarts.init(part2_comp);
 var my_about_part1 = echarts.init(about_part1);
 var my_about_part2 = echarts.init(about_part2);
 var my_about_part3 = echarts.init(about_part3);
+var my_about_part4 = echarts.init(about_part4);
+var my_about_part5 = echarts.init(about_part5);
+
 
 //chart1 data import from data.js
 var NBdata=getNBdata();
@@ -26,6 +28,8 @@ var NBcolorlist=['#f4e925','#C1232B','#E87C25','#27727B','#60C0DD',
                  '#B5C334','#9BCA63','#FAD860','#F3A43B','#60C0DD',
                  '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
                 ];
+var NBrelationdata=getNBrelationdata();
+var NBrelationlinks=getNBrelationlinks();
 console.log(NBdata[0]);
 //-----------------------
 //chart1 function
@@ -57,6 +61,19 @@ function getnowNBNode(type)
      console.log(res);
      return res;
 }
+function cleanCountry(str)
+{
+    str=str.replace("0"," "); 
+    str=str.replace("1"," ");
+    str=str.replace("2"," "); 
+    str=str.replace("3"," "); 
+    str=str.replace("4"," ");    
+    str=str.replace("5"," "); 
+    str=str.replace("6"," "); 
+    str=str.replace("7"," "); 
+    str=str.replace("8"," "); 
+    return str;
+}
 function getnowGender(tag)
 {
 	nowtag=parseInt(tag);
@@ -76,7 +93,7 @@ function getnowtooltip(nownode)
 {
 	var prizetype=getnowPrize(nownode[2]);
 	var gender=getnowGender(nownode[3]);
-	var country=nownode[4];
+	var country=cleanCountry(nownode[4]);
 	var des=nownode[5];
 	var englishname=nownode[6];
 	var name=nownode[7];
@@ -96,7 +113,7 @@ function getnowDes()
         var name=nownode[0]
         var prizetype=getnowPrize(nownode[1])
         var gender=getnowGender(nownode[2])
-        var country=nownode[4]
+        var country=cleanCountry(nownode[4])
         var des=nownode[5]
         var englishname=nownode[8]
         var nowdes=name+" ("+englishname+"),  ["+gender+"]"+" "+country+" "+prizetype+" "+des+"<br/>";
@@ -104,7 +121,376 @@ function getnowDes()
      }
      return NBdes;
 }
+genderoption = {
+    tooltip: {
+        trigger: 'item',
+        formatter: "{a} <br/>{b}: {c} ({d}%)"
+    },
+    legend: {
+        data:['男','女']
+    },
+    title: {
+        text: '诺贝尔奖性别分布统计图',
+        left: 'left',
+        top: 20,
+        textStyle: {
+            color: 'black'
+        }
+    },
+    series: [
+        {
+            name:'性别',
+            type:'pie',
+            radius: ['30%', '45%'],
+            avoidLabelOverlap: false,
+            label: {
+                normal: 
+                {
+                    formatter: '{a|{a}}{abg|}\n{hr|}\n  {b|{b}：}{c}  {per|{d}%}  ',
+                    backgroundColor: '#eee',
+                    borderColor: '#aaa',
+                    borderWidth: 1,
+                    borderRadius: 4,
+                    rich: {
+                        a: {
+                            color: '#999',
+                            lineHeight: 22,
+                            align: 'center'
+                        },
+                        
+                        hr: {
+                            borderColor: '#aaa',
+                            width: '100%',
+                            borderWidth: 0.5,
+                            height: 0
+                        },
+                        b: {
+                            fontSize: 16,
+                            lineHeight: 33,
+                            color:'black'
+                        },
+                        per: {
+                            color: '#eee',
+                            backgroundColor: '#334455',
+                            padding: [2, 4],
+                            borderRadius: 2
+                        }
+                    },
+                    color:'black'
+                },
+                emphasis: {
+                    show: true,
+                    textStyle: {
+                        fontSize: '20',
+                        fontWeight: 'bold'
+                    }
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false
+                }
+            }, 
+            data:[
+                {value:769, name:'男' ,itemStyle:{ color:'#40BF80' }},
+                {value:32, name:'女',itemStyle:{ color:'#9FDFBF' }}
+            ]
+        }
+    ]
+};
+prize_option = {
+    tooltip: {
+        trigger: 'item',
+        formatter: "{a} <br/>{b}: {c} ({d}%)"
+    },
+    legend: {
+        data:['物理学奖','化学奖','生理或医药学奖','文学奖','经济学奖']
+    },
+    title: {
+        text: '诺贝尔奖各奖项获奖人数统计图',
+        left: 'left',
+        top: 20,
+        textStyle: {
+            color: 'black'
+        }
+    },
+    series: [
+        {
+            name:'奖项',
+            type:'pie',
+            radius: ['30%', '45%'],
+            avoidLabelOverlap: false,
+            label: {
+                normal: 
+                {
+                    formatter: '{a|{a}}{abg|}\n{hr|}\n  {b|{b}：}{c}  {per|{d}%}  ',
+                    backgroundColor: '#eee',
+                    borderColor: '#aaa',
+                    borderWidth: 1,
+                    borderRadius: 4,
+                    rich: {
+                        a: {
+                            color: '#999',
+                            lineHeight: 22,
+                            align: 'center'
+                        },
+                        
+                        hr: {
+                            borderColor: '#aaa',
+                            width: '100%',
+                            borderWidth: 0.5,
+                            height: 0
+                        },
+                        b: {
+                            fontSize: 16,
+                            lineHeight: 33,
+                            color:'black'
+                        },
+                        per: {
+                            color: '#eee',
+                            backgroundColor: '#334455',
+                            padding: [2, 4],
+                            borderRadius: 2
+                        }
+                    },
+                    color:'black'
+                },
+                emphasis: {
+                    show: true,
+                    textStyle: {
+                        fontSize: '20',
+                        fontWeight: 'bold'
+                    }
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false
+                }
+            }, 
+            data:[
+                {value:210, name:'物理学奖' ,itemStyle:{ color:NBcolorlist[1] }},
+                {value:181, name:'化学奖',itemStyle:{ color:NBcolorlist[2] }},
+                {value:216, name:'生理或医药学奖',itemStyle:{ color:NBcolorlist[3] }},
+                {value:114, name:'文学奖',itemStyle:{ color:NBcolorlist[4] }},
+                {value:80, name:'经济学奖',itemStyle:{ color:NBcolorlist[5] }}
+            ]
+        }
+    ]
+};
+age_option = {
+    tooltip: {
+        trigger: 'item',
+        formatter: "{a} <br/>{b}: {c} ({d}%)"
+    },
+    legend: {
+        data:['20-39','40-49','50-59','60-69','70-79','above 80']
+    },
+    title: {
+        text: '诺贝尔奖获奖人年龄分布统计图',
+        left: 'left',
+        top: 20,
+        textStyle: {
+            color: 'black'
+        }
+    },
+    series: [
+        {
+            name:'奖项',
+            type:'pie',
+            radius: ['30%', '45%'],
+            avoidLabelOverlap: false,
+            label: {
+                normal: 
+                {
+                    formatter: '{a|{a}}{abg|}\n{hr|}\n  {b|{b}：}{c}  {per|{d}%}  ',
+                    backgroundColor: '#eee',
+                    borderColor: '#aaa',
+                    borderWidth: 1,
+                    borderRadius: 4,
+                    rich: {
+                        a: {
+                            color: '#999',
+                            lineHeight: 22,
+                            align: 'center'
+                        },
+                        
+                        hr: {
+                            borderColor: '#aaa',
+                            width: '100%',
+                            borderWidth: 0.5,
+                            height: 0
+                        },
+                        b: {
+                            fontSize: 16,
+                            lineHeight: 33,
+                            color:'black'
+                        },
+                        per: {
+                            color: '#eee',
+                            backgroundColor: '#334455',
+                            padding: [2, 4],
+                            borderRadius: 2
+                        }
+                    },
+                    color:'black'
+                },
+                emphasis: {
+                    show: true,
+                    textStyle: {
+                        fontSize: '20',
+                        fontWeight: 'bold'
+                    }
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false
+                }
+            }, 
+            data:[
+                {value:43, name:'20-39' ,itemStyle:{ color:'#CFDFEF' }},
+                {value:141, name:'40-49',itemStyle:{ color:'#9FBFDF' }},
+                {value:213, name:'50-59',itemStyle:{ color:'#709FCF' }},
+                {value:220, name:'60-69',itemStyle:{ color:'#4080BF' }},
+                {value:144, name:'70-79',itemStyle:{ color:'#30608F' }},
+                {value:40, name:'above 80',itemStyle:{ color:'#204060' }}
+            ]
+        }
+    ]
+};
+agebar_option= {
+    xAxis: {
+        type: 'category',
+        data: ['1901-1919', '1920-1939', '1940-1959', '1960-1979', '1980-1999', '2000至今']
+    },
+    
+    title: {
+        text: '诺贝尔奖各年代获奖人平均年龄统计图',
+        left: 'left',
+        top: 20,
+        textStyle: {
+            color: 'black'
+        }
+    },
 
+    yAxis: {
+        type: 'value'
+    },
+    series: [{
+        data: [ {value:53, name:'1901-1919' ,itemStyle:{ color:'#9FBFDF' }},
+                {value:51, name:'1920-1939',itemStyle:{ color:'#AFCFDF' }},
+                {value:54, name:'1940-1959',itemStyle:{ color:'#709FCF' }},
+                {value:58, name:'1960-1979',itemStyle:{ color:'#4080BF' }},
+                {value:62, name:'1980-1999',itemStyle:{ color:'#30608F' }},
+                {value:67, name:'2000至今',itemStyle:{ color:'#204060' }}
+                ],
+        type: 'bar',
+        label:{
+             normal:{
+                show:true,
+                position: 'top'
+            }   
+        }
+    }]
+};
+relation_option = {
+            title: { 
+                    text: '诺贝尔奖人物关系图', 
+                     x:'left',
+                     y:'top'
+
+                    },
+            tooltip: {
+                formatter: function (x) {
+                    return x.data.des;
+                }
+            },
+            toolbox: {
+                 show : true,
+                feature : {
+                     restore : {show: true},
+                     magicType: {show: true, type: ['force', 'chord']},
+                     saveAsImage : {show: true}
+                    }
+            },
+            color : [
+                          '#C1232B','#B5C334','#FCCE10','#E87C25','green',
+                           'gray','#0080FF','#FAD860','#F3A43B','#60C0DD',
+                           '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
+                        ],
+            series: [
+                {
+                    
+                    type: 'graph',
+                    layout: 'force',
+    
+                    
+                    symbolSize: 80,
+                    focusNodeAdjacency: true,
+                    roam: true,
+                    edgeSymbol: ['arrow', 'arrow'],
+                    edgeSymbolSize: [4, 10],
+                    edgeLabel: {
+                        normal: {
+                            textStyle: {
+                                fontSize: 20
+                            }
+                        }
+                    },
+                    force: {
+                        repulsion: 1000,
+                        gravity : 0.2,
+                        edgeLength: [100, 400]
+                    },
+                    nodeScaleRatio : 0.4,
+                    draggable: false,
+                    roam:'move',
+                    itemStyle: {
+                        normal: {
+                            
+                            nodeStyle : {
+                        brushType : 'both',
+                        borderColor : 'rgba(255,215,0,0.4)',
+                        borderWidth : 1
+                    }
+                        }
+                    },
+                    lineStyle: {
+                        normal: {
+                            width: 5,
+                            color: '#4b565b'
+
+                        }
+                    },
+                    edgeLabel: {
+                        normal: {
+                            show: true,
+                            textStyle: {
+                                "fontSize": 15
+
+                            },
+                            formatter: function (x) {
+                                return x.data.name;
+                            }
+                        }
+                    },
+                    label: {
+                        normal: {
+                            show: true,
+                            textStyle: {
+                                "fontSize": 12
+                            },
+                            position:'bottom',
+                            color:'black'
+                            
+                        }
+                    },
+                    data: NBrelationdata,
+                    links: NBrelationlinks
+                }
+            ]
+        };
 //This is option set for test
 test_option = {
     backgroundColor: '#2c343c',
@@ -556,10 +942,11 @@ function draw()
         }]
     });
    
-   my_about_part1.setOption(test_option);
-   my_about_part2.setOption(test_option);
-   my_about_part3.setOption(test_option);
-    
+   my_about_part1.setOption(genderoption);
+   my_about_part2.setOption(prize_option);
+   my_about_part3.setOption(age_option);
+   my_about_part4.setOption(agebar_option); 
+   my_about_part5.setOption(relation_option);
 	//alert(currYear);
 	des=getnowDes()
 	$("#intr").html(des);
