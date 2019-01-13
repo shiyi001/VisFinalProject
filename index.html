@@ -15,7 +15,13 @@
 	    <a id="all" class="nav-link active" onclick="nav_onclick_all();" href="#">诺贝尔奖总览</a>
 	  </li>
 	  <li class="nav-item">
-	    <a id="about" class="nav-link" onclick="nav_onclick_about();" href="#ABOUT">诺奖探索</a>
+	    <a id="about" class="nav-link" onclick="nav_onclick_about();" href="#ABOUT">诺奖分布</a>
+	  </li>
+	  <li class="nav-item">
+	    <a id="age" class="nav-link" onclick="nav_onclick_age();" href="#AGE">诺奖年龄</a>
+	  </li>
+	  <li class="nav-item">
+	    <a id="relation" class="nav-link" onclick="nav_onclick_relation();" href="#RELATION">诺奖关系</a>
 	  </li>
 	  <li class="nav-item">
 	    <a id="most" class="nav-link" onclick="nav_onclick_most();" href="#MOST">诺奖之最</a>
@@ -85,19 +91,41 @@
 			<div class="col-md-1 col-sm-1 col-xs-12"></div>
 			<div class="col-md-10 col-sm-10 col-xs-12">
 				<p>诺贝尔奖（The Nobel Prize），是以瑞典著名的化学家、硝化甘油炸药的发明人阿尔弗雷德·贝恩哈德·诺贝尔（Alfred Bernhard Nobel）的部分遗产（3100万瑞典克朗）作为基金在1895年创立的。  在世界范围内，诺贝尔奖通常被认为是所颁奖的领域内最重要的奖项。</p>
+				<p>
+					诺贝尔奖最初分设<b>物理（Physics）、化学（Chemistry）、生理学或医学（Physiology or Medicine）、文学（Literature）、和平（Peace）</b>等五个奖项，于1901年首次颁发。1968年，增设“瑞典国家银行纪念诺贝尔经济科学奖”（The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel）,该奖于1969年首次颁发，人们习惯上称这个额外的奖项为<b>诺贝尔经济学奖</b>。
+				</p>
 			</div>
 			<div class="col-md-1 col-sm-1 col-xs-12"></div>
 		</div>
 		<div class="row">
 			<div class="col-md-1 col-sm-1 col-xs-12"></div>
 			<div class="col-md-5 col-sm-5 col-xs-12">
-				<div id="about_part1" style="height: auto; min-height: 550px; width:100%"></div>
+				<div id="about_part1" style="height: auto; min-height: 500px; width:100%"></div>
 			</div>
 			<div class="col-md-5 col-sm-5 col-xs-12">
-				<div id="about_part2" style="height: auto; min-height: 550px; width:100%"></div>
+				<div id="about_part2" style="height: auto; min-height: 500px; width:100%"></div>
+			</div>
+			<div class="col-md-1 col-sm-1 col-xs-12"></div>	
+		</div>
+
+		<div class="row">
+			<div class="col-md-1 col-sm-1 col-xs-12"></div>
+			<div class="col-md-10 col-sm-10 col-xs-12">
+				<p>诺贝尔和平奖的颁发一直存在争议，故不再本次可视化的统计范围之内；除此之外的其他奖项，至2018年，共有<b>801人获奖</b>，其中男性占绝大多数<b>(96%)</b>,可见男性在科学和医学的顶尖领域占有绝对地位。而由于诺贝尔奖中的科学类奖项往往是颁发给几十年前发现的重要成果，因此诺奖的“滞后反映”现象也勾勒出了当年的性别鸿沟。
+				</p>
 			</div>
 			<div class="col-md-1 col-sm-1 col-xs-12"></div>
-			
+		</div>
+		
+		<div id="AGE" name="AGE"></div>
+		<br><br>
+		<div class="row">
+			<div class="col-md-1 col-sm-1 col-xs-12"></div>
+			<div class="col-md-10 col-sm-10 col-xs-12">
+				<p>诺奖得主的年龄变化也颇为有趣，在最初的二十年，50岁左右的获奖者也不鲜见。而威廉·劳伦斯·布拉格在25岁就获得了诺贝尔物理奖。而进入上世纪60年代，获得诺奖的平均年龄有了明显的增长趋势。这是由于即使现在的科学家在其生命早年就取得了某项科研成果，但同时有成千上万的其他同行们也在研究着同样课题，而且诺贝尔奖评选委员会具有很高的检验标准，某一科研成果要想获奖的话，可能需要等上很多年。
+				</p>
+			</div>
+			<div class="col-md-1 col-sm-1 col-xs-12"></div>
 		</div>
 		<div class="row">
 			<div class="col-md-1 col-sm-1 col-xs-12"></div>
@@ -109,6 +137,16 @@
 			</div>
 			<div class="col-md-1 col-sm-1 col-xs-12"></div>
 		</div>
+		
+		<div id="RELATION" name="RELATION"></div>
+		<br><br>
+		<div class="row">
+			<div class="col-md-1 col-sm-1 col-xs-12"></div>
+			<div class="col-md-10 col-sm-10 col-xs-12">
+				<p>我们还挖掘了诺贝尔奖获得者的亲属关系，其中最为瞩目的是居里一家，共获得了五次诺奖，其中居里夫人(玛丽·居里）获得了两次，丈夫(皮埃尔·居里)获得了一次，女儿获得一次，女婿获得一次。</p>
+			</div>
+			<div class="col-md-2 col-sm-2 col-xs-12"></div>
+		</div>
 		<div class="row">
 			<div class="col-md-1 col-sm-1 col-xs-12"></div>
 			<div class="col-md-10 col-sm-10 col-xs-12">
@@ -116,13 +154,6 @@
 			</div>
 			
 			<div class="col-md-1 col-sm-1 col-xs-12"></div>
-		</div>
-		<div class="row">
-			<div class="col-md-1 col-sm-1 col-xs-12"></div>
-			<div class="col-md-10 col-sm-10 col-xs-12">
-				<p>诺贝尔奖（The Nobel Prize），是以瑞典著名的化学家、硝化甘油炸药的发明人阿尔弗雷德·贝恩哈德·诺贝尔（Alfred Bernhard Nobel）的部分遗产（3100万瑞典克朗）作为基金在1895年创立的。 [1-2]  在世界范围内，诺贝尔奖通常被认为是所颁奖的领域内最重要的奖项。</p>
-			</div>
-			<div class="col-md-2 col-sm-2 col-xs-12"></div>
 		</div>
 	</div>
 
