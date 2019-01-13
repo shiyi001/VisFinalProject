@@ -10,6 +10,9 @@ var about_part2 = document.getElementById('about_part2');
 var about_part3 = document.getElementById('about_part3');
 var about_part4 = document.getElementById('about_part4');
 var about_part5 = document.getElementById('about_part5');
+var about_part6 = document.getElementById('about_part6');
+var about_part7 = document.getElementById('about_part7');
+var about_part8 = document.getElementById('about_part8');
 
 var myChart1 = echarts.init(part1_comp);
 var myChart2 = echarts.init(part2_comp);
@@ -18,6 +21,9 @@ var my_about_part2 = echarts.init(about_part2);
 var my_about_part3 = echarts.init(about_part3);
 var my_about_part4 = echarts.init(about_part4);
 var my_about_part5 = echarts.init(about_part5);
+var my_about_part6 = echarts.init(about_part6);
+var my_about_part7 = echarts.init(about_part7);
+var my_about_part8 = echarts.init(about_part8);
 
 
 //chart1 data import from data.js
@@ -963,27 +969,283 @@ function draw()
                         return '#F4E001';
                     }else if (param.name =="国际组织"){
                         return '#F0805A';
+                    }else if (param.name =="波兰"){
+                        return '#800080';
+                    }else if (param.name =="荷兰"){
+                        return '#4682B4';
+                    }else if (param.name =="普鲁士(德国)"){
+                        return '#00FFFF';
+                    }else if (param.name =="西班牙"){
+                        return '#008080';
+                    }else if (param.name =="苏格兰"){
+                        return '#2E8B57';
+                    }else if (param.name =="奥地利"){
+                        return '#FFA500';
+                    }else if (param.name =="挪威"){
+                        return '#6495ED';
+                    }else if (param.name =="俄罗斯"){
+                        return '#FFC0CB';
                     }else{
-                        return '#F0805A';
+                        return '#DA70D6';
                     }
             },
             // data:[12,23]
         }]
     });
    
+    des = get_now_pics()
+	$("#intr").html(des);
+}
+
+Japan_1_option = {
+    title: {
+        text: '日本诺奖分布'
+    },
+    tooltip : {
+        trigger: 'axis',
+        averse:true,
+        axisPointer: {
+            type: 'cross',
+            label: {
+                backgroundColor: '#6a7985'
+            }
+        }
+    },
+    legend: {
+        data:['化学奖','物理奖','生理学或医学奖','文学奖','和平奖']
+    },
+    toolbox: {
+        feature: {
+            saveAsImage: {}
+        }
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis : [
+        {
+            type : 'category',
+            boundaryGap : false,
+            data : ['1970','1980','1990','2000','2010','2018']
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value'
+        }
+    ],
+    series : [
+        {
+            name:'和平奖',
+            type:'line',
+            stack: '总量',
+            areaStyle: {},
+            data:[0, 1, 1, 1, 1, 1]
+        },
+        {
+            name:'文学奖',
+            type:'line',
+            stack: '总量',
+            areaStyle: {},
+            data:[1, 1, 1, 2, 2, 2]
+        },
+        {
+            name:'生理学或医学奖',
+            type:'line',
+            stack: '总量',
+            areaStyle: {},
+            data:[0, 0, 1, 1, 1, 4]
+        },
+        {
+            name:'化学奖',
+            type:'line',
+            stack: '总量',
+            areaStyle: {normal: {}},
+            data:[0, 0, 1, 2, 7, 7]
+        },
+        {
+            name:'物理奖',
+            type:'line',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'top'
+                }
+            },
+            areaStyle: {normal: {}},
+            data:[2, 3, 3, 3, 6, 9]
+        }
+    ]
+};
+Japan_2_option = {
+    title : {
+        text: '日本诺奖本科所在大学',
+        subtext: '不包括两位美籍日裔诺贝尔奖获得者',
+        x:'center'
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    // legend: {
+    //     orient: 'vertical',
+    //     left: 'left',
+    //     data: ['东京大学','京都大学','名古屋大学','东京工业大学','东北大学','北海道大学','长崎大学','神户大学']
+    // },
+    series : [
+        {
+            name: '人数',
+            type: 'pie',
+            radius : '55%',
+            center: ['50%', '60%'],
+            data:[
+                {value:9, name:'东京大学'},
+                {value:10, name:'京都大学'},
+                {value:3, name:'名古屋大学'},
+                {value:2, name:'东京工业大学'},
+                {value:1, name:'东北大学'},
+                {value:1, name:'北海道大学'},
+                {value:1, name:'长崎大学'},
+                {value:1, name:'神户大学'},
+            ],
+            itemStyle: {
+                emphasis: {
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+
+Japan_3_option = {
+    title : {
+        text: '日本诺奖博士学位学校',
+        subtext: '数据来源网络',
+        x:'center'
+    },
+    tooltip: {
+        trigger: 'item',
+        formatter: "{a} <br/>{b}: {c} ({d}%)"
+    },
+    // legend: {
+    //     orient: 'vertical',
+    //     x: 'left',
+    //     data:['东京大学','京都大学','名古屋大学','东京工业大学','东北大学','北海道大学','长崎大学','神户大学','宾夕法尼亚大学','加州大学圣迭亚哥分校']
+    // },
+    series: [
+        {
+            name:'访问来源',
+            type:'pie',
+            selectedMode: 'single',
+            radius: [0, '30%'],
+
+            label: {
+                normal: {
+                    position: 'inner'
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false
+                }
+            },
+            data:[
+                {value:20, name:'国内'},
+                {value:2, name:'出国留学', selected:true},
+                {value:3,name:'无博士学位'},
+            ]
+        },
+        {
+            name:'访问来源',
+            type:'pie',
+            radius: ['40%', '55%'],
+            label: {
+                normal: {
+                    formatter: '{a|{a}}{abg|}\n{hr|}\n  {b|{b}：}{c}  {per|{d}%}  ',
+                    backgroundColor: '#eee',
+                    borderColor: '#aaa',
+                    borderWidth: 1,
+                    borderRadius: 4,
+                    // shadowBlur:3,
+                    // shadowOffsetX: 2,
+                    // shadowOffsetY: 2,
+                    // shadowColor: '#999',
+                    // padding: [0, 7],
+                    rich: {
+                        a: {
+                            color: '#999',
+                            lineHeight: 22,
+                            align: 'center'
+                        },
+                        // abg: {
+                        //     backgroundColor: '#333',
+                        //     width: '100%',
+                        //     align: 'right',
+                        //     height: 22,
+                        //     borderRadius: [4, 4, 0, 0]
+                        // },
+                        hr: {
+                            borderColor: '#aaa',
+                            width: '100%',
+                            borderWidth: 0.5,
+                            height: 0
+                        },
+                        b: {
+                            fontSize: 16,
+                            lineHeight: 33
+                        },
+                        per: {
+                            color: '#eee',
+                            backgroundColor: '#334455',
+                            padding: [2, 4],
+                            borderRadius: 2
+                        }
+                    }
+                }
+            },
+            data:[
+                {value:5, name:'东京大学'},
+                {value:5, name:'名古屋大学'},
+                {value:2, name:'京都大学'},
+                {value:2, name:'大阪大学'},
+                {value:1, name:'东京工业大学'},
+                {value:1, name:'东北大学'},
+                {value:1, name:'北海道大学'},
+                {value:1, name:'长崎大学'},
+                {value:1, name:'德岛大学'},
+                {value:1, name:'埼玉大学'},
+                {value:1, name:'加州大学圣迭亚哥分校'},
+                {value:1, name:'宾夕法尼亚大学'},
+                {value:3, name: '无博士学位'}
+
+            ]
+        }
+    ]
+};
+
+function draw_static() {
     my_about_part1.setOption(genderoption);
     my_about_part2.setOption(prize_option);
     my_about_part3.setOption(age_option);
     my_about_part4.setOption(agebar_option); 
     my_about_part5.setOption(relation_option);
-    //alert(currYear);
-	//des=getnowDes()
-    des = get_now_pics()
-	$("#intr").html(des);
+
+    my_about_part6.setOption(Japan_1_option);
+    my_about_part7.setOption(Japan_2_option); 
+    my_about_part8.setOption(Japan_3_option);
+
 }
 
 $(document).ready(function() {
 	draw();
+
+    draw_static();
 	//必须，绑定图表自适应功能
     window.onresize = function () {
     	myChart1.resize(); 
@@ -1006,16 +1268,38 @@ function nav_onclick_all() {
     document.getElementById("all").className = "nav-link active";
     document.getElementById("about").className = "nav-link";
     document.getElementById("most").className = "nav-link";
+    document.getElementById("age").className = "nav-link";
+    document.getElementById("relation").className = "nav-link";
 }
 
 function nav_onclick_about() {
     document.getElementById("all").className = "nav-link";
     document.getElementById("about").className = "nav-link active";
     document.getElementById("most").className = "nav-link";
+    document.getElementById("age").className = "nav-link";
+    document.getElementById("relation").className = "nav-link";
 }
 
 function nav_onclick_most() {
     document.getElementById("all").className = "nav-link";
     document.getElementById("about").className = "nav-link";
     document.getElementById("most").className = "nav-link active";
+    document.getElementById("age").className = "nav-link";
+    document.getElementById("relation").className = "nav-link";
+}
+
+function nav_onclick_age() {
+    document.getElementById("all").className = "nav-link";
+    document.getElementById("about").className = "nav-link";
+    document.getElementById("most").className = "nav-link";
+    document.getElementById("age").className = "nav-link active";
+    document.getElementById("relation").className = "nav-link";
+}
+
+function nav_onclick_relation() {
+    document.getElementById("all").className = "nav-link";
+    document.getElementById("about").className = "nav-link";
+    document.getElementById("most").className = "nav-link";
+    document.getElementById("age").className = "nav-link";
+    document.getElementById("relation").className = "nav-link active";
 }
