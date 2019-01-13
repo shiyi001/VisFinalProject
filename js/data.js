@@ -995,7 +995,7 @@ var NBrelationdatas=[
                         }, 
                         {
                             name: '乌尔夫·冯·奥伊勒',
-                            des: '姓名:刘备<br/>西汉中山靖王刘胜之后<br/>三国时期蜀汉开国皇帝、政治家',
+                            des: '1970年 生理学或医学奖',
                             symbol:'image://http://file.caixin.com/datanews/nobel/photo/1f178a82b9014a903d9d41acab773912b21bb051f819ce3c.jpg',
                             symbolSize: 60,
                             category:1
