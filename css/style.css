@@ -70,12 +70,19 @@
 
 .img{
 	position: absolute;
-	top: 5%;
+	top: 20px;
 	left: 10%;
 	width: 80%; 
 	height: 200px;
 	max-width: 80%; 
 	display: block;
+}
+
+.person_img {
+	height: 138px;
+	max-height: 138px;
+	width: 110px;
+	max-width: 110px; 
 }
 
 #prev {

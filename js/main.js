@@ -140,7 +140,7 @@ function get_now_pics() {
         //var nowdes = name+" ("+englishname+"),  ["+gender+"]"+" "+country+" "+prizetype+" "+des+"<br/>";
         
         nowdes = "<div class=\"col-md-2 col-sm-2 col-xs-12\">" + 
-            "<img src=\"" + nownode[6] + "\" />" + 
+            "<img class=\"person_img\" src=\"./imgs/persons/" + nownode[6].split("/")[6] + "\" />" + 
             "<p>" + name + "[" + country + "]" + "[" + prizetype + "]" + "</p>" + 
             "</div>"
         console.log(nowdes);
