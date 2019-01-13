@@ -975,9 +975,17 @@ play();
 function nav_onclick_all() {
     document.getElementById("all").className = "nav-link active";
     document.getElementById("about").className = "nav-link";
+    document.getElementById("most").className = "nav-link";
 }
 
 function nav_onclick_about() {
     document.getElementById("all").className = "nav-link";
     document.getElementById("about").className = "nav-link active";
+    document.getElementById("most").className = "nav-link";
+}
+
+function nav_onclick_most() {
+    document.getElementById("all").className = "nav-link";
+    document.getElementById("about").className = "nav-link";
+    document.getElementById("most").className = "nav-link active";
 }
