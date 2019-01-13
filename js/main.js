@@ -100,14 +100,15 @@ function getnowtooltip(nownode)
 	s=name+"("+englishname+")<br/>"+"["+gender+"]"+" "+country+" "+prizetype+"<br/>"+des;
 	return s;
 }
+
 function getnowDes()
 {
 	NBdes = currYear.toString() + "年诺贝尔奖:<br/>";
-	tag=currYear-startYear
-	nodes=NBdata[tag]
+	tag = currYear-startYear
+	nodes = NBdata[tag]
 	var res = [];
     console.log(nodes)
-    for (var i = 1; i < nodes.length; i++) 
+    for (var i = 1; i < Math.min(nodes.length, 6); i++) 
      {
         var nownode=nodes[i]
         var name=nownode[0]
@@ -117,10 +118,38 @@ function getnowDes()
         var des=nownode[5]
         var englishname=nownode[8]
         var nowdes=name+" ("+englishname+"),  ["+gender+"]"+" "+country+" "+prizetype+" "+des+"<br/>";
-        NBdes=NBdes+nowdes;
+        NBdes = NBdes+nowdes;
      }
      return NBdes;
 }
+
+function get_now_pics() {
+    NBdes = currYear.toString() + "年诺贝尔奖:<br/>";
+    tag = currYear-startYear
+    nodes = NBdata[tag]
+    
+    NBdes = NBdes + "<div class=\"row\">"
+    for (var i = 1; i < Math.min(nodes.length, 7); i++) {
+        var nownode = nodes[i]
+        var name = nownode[0]
+        var prizetype = getnowPrize(nownode[1])
+        var gender = getnowGender(nownode[2])
+        var country = cleanCountry(nownode[4])
+        var des = nownode[5]
+        var englishname = nownode[8]
+        //var nowdes = name+" ("+englishname+"),  ["+gender+"]"+" "+country+" "+prizetype+" "+des+"<br/>";
+        
+        nowdes = "<div class=\"col-md-2 col-sm-2 col-xs-12\">" + 
+            "<img src=\"" + nownode[6] + "\" />" + 
+            "<p>" + name + "[" + country + "]" + "[" + prizetype + "]" + "</p>" + 
+            "</div>"
+        console.log(nowdes);
+        NBdes = NBdes+nowdes;
+    }
+    NBdes = NBdes + "</div>"
+    return NBdes;
+}
+
 genderoption = {
     tooltip: {
         trigger: 'item',
@@ -942,13 +971,14 @@ function draw()
         }]
     });
    
-   my_about_part1.setOption(genderoption);
-   my_about_part2.setOption(prize_option);
-   my_about_part3.setOption(age_option);
-   my_about_part4.setOption(agebar_option); 
-   my_about_part5.setOption(relation_option);
-	//alert(currYear);
-	des=getnowDes()
+    my_about_part1.setOption(genderoption);
+    my_about_part2.setOption(prize_option);
+    my_about_part3.setOption(age_option);
+    my_about_part4.setOption(agebar_option); 
+    my_about_part5.setOption(relation_option);
+    //alert(currYear);
+	//des=getnowDes()
+    des = get_now_pics()
 	$("#intr").html(des);
 }
 
