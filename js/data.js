@@ -736,8 +736,8 @@ var NBData=[[1901,["威廉·康拉德·伦琴",1,1,56,"德国","“发现不寻�
 ["罗伯特·莱夫科维茨",2,1,69,"美国1","“对G蛋白偶联受体的研究”","http://file.caixin.com/datanews/nobel/photo/Lefkowitz3.jpg","","Robert J. Lefkowitz"],
 ["布莱恩·科比尔卡",2,1,57,"美国2","“对G蛋白偶联受体的研究”","http://file.caixin.com/datanews/nobel/photo/225px-Brian_Kobilka_%28649437151%29.jpg","","Brian K. Kobilka"],
 ["约翰·伯特兰·格登",3,1,79,"英国","“发现成熟细胞可被重写成多功能细胞”","http://file.caixin.com/datanews/nobel/photo/225px-John_Gurdon_Cambridge_2012.JPG","","Sir John B. Gurdon"],
-["山中伸弥",3,1,50,"日本","“发现成熟细胞可被重写成多功能细胞”","http://file.caixin.com/datanews/nobel/photo/200px-Shinya_yamanaka10.jpg","","Shinya Yamanaka"],
 ["莫言",4,1,57,"中国","用幻觉现实主义将民间故事、历史和现代融为一体。","http://file.caixin.com/datanews/nobel/photo/220px-MoYan_Hamburg_2008.jpg","1","Mo Yan"],
+["山中伸弥",3,1,50,"日本","“发现成熟细胞可被重写成多功能细胞”","http://file.caixin.com/datanews/nobel/photo/200px-Shinya_yamanaka10.jpg","","Shinya Yamanaka"],
 ["阿尔文·罗斯",5,1,61,"美国3","创建“稳定分配”的理论，并进行“市场设计”的实践。","http://file.caixin.com/datanews/nobel/photo/225px-Al_Roth%2C_Sydney_Ideas_lecture_2012c.jpg","2","Alvin E. Roth"],
 ["劳埃德·沙普利",5,1,89,"美国4","创建“稳定分配”的理论，并进行“市场设计”的实践。","http://file.caixin.com/datanews/nobel/photo/225px-Shapley%2C_Lloyd_%281923%29.jpeg","","Lloyd S. Shapley"]],
 [2013,["彼得·W·希格斯",1,1,84,"英国","对希格斯玻色子的预测[1][4-6]","http://file.caixin.com/datanews/nobel/photo/150px-Higgs%2C_Peter_%281929%293.jpg","","Peter W. Higgs"],
@@ -773,24 +773,24 @@ var NBData=[[1901,["威廉·康拉德·伦琴",1,1,56,"德国","“发现不寻�
 ["斯韦特兰娜·阿列克谢耶维奇",4,2,67,"白俄罗斯","-","http://file.caixin.com/datanews/nobel/photo/2015_9.jpg","","Svetlana Aleksijevitj"],
 ["安格斯·迪顿",5,1,70,"美国2","-","http://file.caixin.com/datanews/nobel/photo/2015_10.jpg","","Angus Deaton"]],
 [2016,
-["大隅良典",3,1,71,"日本","因“在细胞自噬机制方面的发现”而获得诺贝尔生理学或医学奖","","","Yoshinori Ohsumi"],
-["大卫·索利斯",1,1,82,"美国","理论发现拓扑相变和拓扑相物质","","","David J. Thouless"],
-["邓肯·霍尔丹",1,1,65,"美国0","理论发现拓扑相变和拓扑相物质","","","Duncan Haldane"],
-["迈克尔·科斯德里茨",1,1,73,"美国1","理论发现拓扑相变和拓扑相物质","","","J. MichaelKosterlitz"],
-["让-皮埃尔·索维奇",2,1,72,"法国","合成分子机器","","","Jean-Pierre Sauvage"],
-["伯纳德·L·费林加",2,1,65,"荷兰","合成分子机器","","","Bernard L. Feringa"],
-["詹姆斯·弗雷泽·斯托达特",2,1,74,"美国2","合成分子机器","","","Sir J. Fraser Stoddart"],
-["鲍勃·迪伦",4,1,75,"美国3","第一位获得该奖项的作曲家","","","Bob Dylan"],
-["本特·霍姆斯特罗姆",5,1,67,"芬兰","契约理论","","","Bengt Holmstrom"],
-["奥利弗·哈特",5,1,68,"美国4","契约理论","","","Bob Dylan"]
+["大隅良典",3,1,71,"日本","因“在细胞自噬机制方面的发现”而获得诺贝尔生理学或医学奖","http://file.caixin.com/datanews/nobel/photo/Yoshinori.jpg","","Yoshinori Ohsumi"],
+["大卫·索利斯",1,1,82,"美国","理论发现拓扑相变和拓扑相物质","http://file.caixin.com/datanews/nobel/photo/David.jpg","","David J. Thouless"],
+["邓肯·霍尔丹",1,1,65,"美国0","理论发现拓扑相变和拓扑相物质","http://file.caixin.com/datanews/nobel/photo/Duncan.jpg","","Duncan Haldane"],
+["迈克尔·科斯德里茨",1,1,73,"美国1","理论发现拓扑相变和拓扑相物质","http://file.caixin.com/datanews/nobel/photo/J.jpg","","J. MichaelKosterlitz"],
+["让-皮埃尔·索维奇",2,1,72,"法国","合成分子机器","http://file.caixin.com/datanews/nobel/photo/Jean-Pierre.jpg","","Jean-Pierre Sauvage"],
+["伯纳德·L·费林加",2,1,65,"荷兰","合成分子机器","http://file.caixin.com/datanews/nobel/photo/Bernard.jpg","","Bernard L. Feringa"],
+["詹姆斯·弗雷泽·斯托达特",2,1,74,"美国2","合成分子机器","http://file.caixin.com/datanews/nobel/photo/Yoshinori.jpg","","Sir J. Fraser Stoddart"],
+["鲍勃·迪伦",4,1,75,"美国3","第一位获得该奖项的作曲家","http://file.caixin.com/datanews/nobel/photo/Yoshinori.jpg","","Bob Dylan"],
+["本特·霍姆斯特罗姆",5,1,67,"芬兰","契约理论","http://file.caixin.com/datanews/nobel/photo/Yoshinori.jpg","","Bengt Holmstrom"],
+["奥利弗·哈特",5,1,68,"美国4","契约理论","http://file.caixin.com/datanews/nobel/photo/Yoshinori.jpg","","Bob Dylan"]
 ],
 [2017,
-["杰弗里·霍尔",3,1,72,"美国","发现控制昼夜节律机制","","","Jeffrey C Hal"],
-["迈克尔·杨",3,1,68,"美国0","发现控制昼夜节律机制","","","Michael W. Young"],
-["迈克尔·罗斯巴什",3,1,73,"美国1","发现控制昼夜节律机制","","","Michael Rosbashl"],
-["雷纳·韦斯",1,1,85,"美国2","使引力波探测成为可能","","","Rainer Weiss"],
-["邓肯·霍尔丹",1,1,81,"美国3","使引力波探测成为可能","","","Duncan Haldane"],
-["基普·S·索恩",1,1,77,"美国4","使引力波探测成为可能","","","Kip Stephen Thorne"],
+["杰弗里·霍尔",3,1,72,"美国","发现控制昼夜节律机制","http://file.caixin.com/datanews/nobel/photo/Jeffrey.jpg","","Jeffrey C Hal"],
+["迈克尔·杨",3,1,68,"美国0","发现控制昼夜节律机制","http://file.caixin.com/datanews/nobel/photo/Young.jpg","","Michael W. Young"],
+["迈克尔·罗斯巴什",3,1,73,"美国1","发现控制昼夜节律机制","http://file.caixin.com/datanews/nobel/photo/Rosbashl.jpg","","Michael Rosbashl"],
+["雷纳·韦斯",1,1,85,"美国2","使引力波探测成为可能","http://file.caixin.com/datanews/nobel/photo/Rainer.jpg","","Rainer Weiss"],
+["巴里·巴里什",1,1,91,"美国3","使引力波探测成为可能","http://file.caixin.com/datanews/nobel/photo/Barry.jpg","","Barry Clark Barish"],
+["基普·S·索恩",1,1,77,"美国4","使引力波探测成为可能","http://file.caixin.com/datanews/nobel/photo/Kip.jpg","","Kip Stephen Thorne"],
 ["理查德·亨德森",2,1,72,"美国5","表彰其发展了冷冻电子显微镜技术，以很高的分辨率确定了溶液里的生物分子的结构","","","Richard Henderson"],
 ["阿希姆·弗兰克",2,1,77,"美国6","表彰其发展了冷冻电子显微镜技术，以很高的分辨率确定了溶液里的生物分子的结构","","","Joachim Frank"],
 ["雅克·杜波谢",2,1,75,"瑞士","表彰其发展了冷冻电子显微镜技术，以很高的分辨率确定了溶液里的生物分子的结构","","","Jacques Dubochet"],
@@ -798,18 +798,17 @@ var NBData=[[1901,["威廉·康拉德·伦琴",1,1,56,"德国","“发现不寻�
 ["理查德·塞勒",5,1,72,"美国7","将心理上的现实假设纳入到经济决策分析","","","Richard Thaler"]
 ],
 [2018,
-["本庶佑",3,1,76,"日本","发现负性免疫调节治疗癌症的疗法方面的贡献","","","Tasuku Honjo"],
-["詹姆斯·艾利森",3,1,70,"美国","发现负性免疫调节治疗癌症的疗法方面的贡献","","","James P. Allison"],
-["唐娜·斯特里克兰",1,2,59,"加拿大","激光物理领域的突破性发明","","","Donna Stricklan"],
-["热拉尔·穆鲁",1,1,74,"法国","激光物理领域的突破性发明","","","Gerard Mourou"],
-["亚瑟·阿斯金",1,1,96,"美国0","激光物理领域的突破性发明","","","Arthur Ashkin"],
-["弗朗西丝·阿诺德",2,2,61,"美国1","酶领域研究","","","Frances H. Arnold"],
+["本庶佑",3,1,76,"日本","发现负性免疫调节治疗癌症的疗法方面的贡献","http://file.caixin.com/datanews/nobel/photo/Tasuku.jpg","","Tasuku Honjo"],
+["詹姆斯·艾利森",3,1,70,"美国","发现负性免疫调节治疗癌症的疗法方面的贡献","http://file.caixin.com/datanews/nobel/photo/James.jpg","","James P. Allison"],
+["保罗·罗默",5,1,63,"美国5","在创新、气候和经济增长方面研究","http://file.caixin.com/datanews/nobel/photo/Paul.jpg","","Paul M.Romer"],
+["唐娜·斯特里克兰",1,2,59,"加拿大","激光物理领域的突破性发明","http://file.caixin.com/datanews/nobel/photo/Donna.jpg","","Donna Stricklan"],
+["亚瑟·阿斯金",1,1,96,"美国0","激光物理领域的突破性发明","http://file.caixin.com/datanews/nobel/photo/Arthur.jpg","","Arthur Ashkin"],
+["弗朗西丝·阿诺德",2,2,61,"美国1","酶领域研究","http://file.caixin.com/datanews/nobel/photo/Frances.jpg","","Frances H. Arnold"],
 ["乔治·史密斯",2,1,77,"美国3","酶领域研究","","","George P. Smith"],
 ["格雷戈里·温特",2,1,67,"英国","酶领域研究","","","Gregory P. Winter"],
-["威廉·诺德豪斯",5,1,77,"美国4","在创新、气候和经济增长方面研究","","","William D.Nordhaus"],
-["保罗·罗默",5,1,63,"美国5","在创新、气候和经济增长方面研究","","","Paul M.Romer"]
+["热拉尔·穆鲁",1,1,74,"法国","激光物理领域的突破性发明","http://file.caixin.com/datanews/nobel/photo/Gerard.jpg","","Gerard Mourou"],
+["威廉·诺德豪斯",5,1,77,"美国4","在创新、气候和经济增长方面研究","","","William D.Nordhaus"]
 ]
-
 
 ];
 var countryList = ["墨西哥","危地马拉","哥伦比亚","智利","圣卢西亚","阿根廷","美国","加拿大","冰岛","葡萄牙","爱尔兰","西班牙","英国","法国","比利时","荷兰","瑞士","挪威","意大利","丹麦","德国","捷克","奥地利","瑞典","匈牙利","波黑","波兰","希腊","芬兰","俄罗斯","白俄罗斯","尼日利亚","南非","土耳其","埃及","塞浦路斯","以色列","巴基斯坦","印度","中国","日本","澳大利亚"];
@@ -900,13 +899,13 @@ var NBrelationdatas=[
                             des: '2014年 生理学或医学奖',
                             symbolSize: 60,
                             
-                            symbol:'image://http://file.caixin.com/datanews/nobel/photo/2014_EdvardIMoser.jpg'
+                            symbol:'image://./imgs/persons/2014_EdvardIMoser.jpg'
                             
                         }, 
                         {
                             name: '梅-布里特·莫泽',
                             des: '2014年 生理学或医学奖',
-                            symbol:'image://http://file.caixin.com/datanews/nobel/photo/2014_MayBrittMoser.jpg',
+                            symbol:'image://./imgs/persons/2014_MayBrittMoser.jpg',
                             symbolSize: 60,
                             category:1
                         },
@@ -915,13 +914,13 @@ var NBrelationdatas=[
                             des: '1903年 物理奖<br/>1911年 化学奖',
                             symbolSize: 60,
                             
-                            symbol:'image://http://file.caixin.com/datanews/nobel/photo/200px-Mariecurie2.jpg'
+                            symbol:'image://./imgs/persons/200px-Mariecurie2.jpg'
                             
                         }, 
                         {
                             name: '皮埃尔·居里',
                             des: '1903年 物理奖',
-                            symbol:'image://http://file.caixin.com/datanews/nobel/photo/Pierrecurie.jpg',
+                            symbol:'image://./imgs/persons/Pierrecurie.jpg',
                             symbolSize: 60,
                             category:1
                         },
@@ -930,13 +929,13 @@ var NBrelationdatas=[
                             des: '1935年 化学奖',
                             symbolSize: 60,
                             
-                            symbol:'image://http://file.caixin.com/datanews/nobel/photo/175px-Joliot-curie.jpg'
+                            symbol:'image://./imgs/persons/175px-Joliot-curie.jpg'
                             
                         }, 
                         {
                             name: '弗雷德里克·约里奥-居里',
                             des: '1935年 化学奖',
-                            symbol:'image://http://file.caixin.com/datanews/nobel/photo/225px-Curie_Joliot_1934_London.jpg',
+                            symbol:'image://./imgs/persons/225px-Curie_Joliot_1934_London.jpg',
                             symbolSize: 60,
                             category:1
                         },
@@ -945,13 +944,13 @@ var NBrelationdatas=[
                             des: '1947年 生理学或医学奖',
                             symbolSize: 60,
                             
-                            symbol:'image://http://file.caixin.com/datanews/nobel/photo/220px-Carl_Ferdinand_Cori.jpg'
+                            symbol:'image://./imgs/persons/220px-Carl_Ferdinand_Cori.jpg'
                             
                         }, 
                         {
                             name: '格蒂·特蕾莎·科里',
                             des: '1947年 生理学或医学奖',
-                            symbol:'image://http://file.caixin.com/datanews/nobel/photo/220px-Gerty_Theresa_Cori.jpg',
+                            symbol:'image://./imgs/persons/220px-Gerty_Theresa_Cori.jpg',
                             symbolSize: 60,
                             category:1
                         },
@@ -960,13 +959,13 @@ var NBrelationdatas=[
                             des: '1906年 物理学奖',
                             symbolSize: 60,
                             
-                            symbol:'image://http://file.caixin.com/datanews/nobel/photo/250px-Jj-thomson2.jpg'
+                            symbol:'image://./imgs/persons/250px-Jj-thomson2.jpg'
                             
                         }, 
                         {
                             name: '乔治·汤姆孙',
                             des: '1937年 物理学奖',
-                            symbol:'image://http://file.caixin.com/datanews/nobel/photo/George_Paget_Thomson.jpg',
+                            symbol:'image://./imgs/persons/George_Paget_Thomson.jpg',
                             symbolSize: 60,
                             category:1
                         },
@@ -975,13 +974,13 @@ var NBrelationdatas=[
                             des: '1915年 物理学奖',
                             symbolSize: 60,
                             
-                            symbol:'image://http://file.caixin.com/datanews/nobel/photo/225px-William_Henry_Bragg.jpg'
+                            symbol:'image://./imgs/persons/225px-William_Henry_Bragg.jpg'
                             
                         }, 
                         {
                             name: '威廉·劳伦斯·布拉格',
                             des: '1915年 物理学奖',
-                            symbol:'image://http://file.caixin.com/datanews/nobel/photo/200px-Wl-bragg.jpg',
+                            symbol:'image://./imgs/persons/200px-Wl-bragg.jpg',
                             symbolSize: 60,
                             category:1
                         },
@@ -990,13 +989,13 @@ var NBrelationdatas=[
                             des: '1929年 化学奖',
                             symbolSize: 60,
                             
-                            symbol:'image://http://file.caixin.com/datanews/nobel/photo/180px-Euler-chelpin.jpg'
+                            symbol:'image://./imgs/persons/180px-Euler-chelpin.jpg'
                             
                         }, 
                         {
                             name: '乌尔夫·冯·奥伊勒',
                             des: '1970年 生理学或医学奖',
-                            symbol:'image://http://file.caixin.com/datanews/nobel/photo/1f178a82b9014a903d9d41acab773912b21bb051f819ce3c.jpg',
+                            symbol:'image://./imgs/persons/1f178a82b9014a903d9d41acab773912b21bb051f819ce3c.jpg',
                             symbolSize: 60,
                             category:1
                         },
@@ -1005,13 +1004,13 @@ var NBrelationdatas=[
                             des: '1922年 物理学奖',
                             symbolSize: 60,
                             
-                            symbol:'image://http://file.caixin.com/datanews/nobel/photo/150px-Aage_Bohr.jpg'
+                            symbol:'image://./imgs/persons/150px-Aage_Bohr.jpg'
                             
                         }, 
                         {
                             name: '奥格·尼尔斯·玻尔',
                             des: '1975年 物理学奖',
-                            symbol:'image://http://file.caixin.com/datanews/nobel/photo/150px-Aage_Bohr.jpg',
+                            symbol:'image://./imgs/persons/150px-Aage_Bohr.jpg',
                             symbolSize: 60,
                             category:1
                         },
@@ -1020,13 +1019,13 @@ var NBrelationdatas=[
                             des: '1924年 物理学奖',
                             symbolSize: 60,
                             
-                            symbol:'image://http://file.caixin.com/datanews/nobel/photo/225px-1924_Karl_Manne_Siegbahn.jpg'
+                            symbol:'image://./imgs/persons/225px-1924_Karl_Manne_Siegbahn.jpg'
                             
                         }, 
                         {
                             name: '凯·西格巴恩',
                             des: '1981年 物理学奖',
-                            symbol:'image://http://file.caixin.com/datanews/nobel/photo/ae51f3deb48f8c540bf31d0138292df5e1fe9925bc315fc0.jpg',
+                            symbol:'image://./imgs/persons/ae51f3deb48f8c540bf31d0138292df5e1fe9925bc315fc0.jpg',
                             symbolSize: 60,
                             category:1
                         },
@@ -1035,13 +1034,13 @@ var NBrelationdatas=[
                             des: '1959年 生理学或医学奖',
                             symbolSize: 60,
                             
-                            symbol:'image://http://file.caixin.com/datanews/nobel/photo/6c224f4a20a44623f3a8acf19822720e0df3d7ca7acbf7ff.jpg'
+                            symbol:'image://./imgs/persons/6c224f4a20a44623f3a8acf19822720e0df3d7ca7acbf7ff.jpg'
                             
                         }, 
                         {
                             name: '罗杰·科恩伯格',
                             des: '2006年 化学奖',
-                            symbol:'image://http://file.caixin.com/datanews/nobel/photo/Roger_Kornberg.jpg',
+                            symbol:'image://./imgs/persons/Roger_Kornberg.jpg',
                             symbolSize: 60,
                             category:1
                         },
@@ -1050,13 +1049,13 @@ var NBrelationdatas=[
                             des: '1969年 经济学奖',
                             symbolSize: 60,
                             
-                            symbol:'image://http://file.caixin.com/datanews/nobel/photo/226px-Jan_Tinbergen_1982.jpg'
+                            symbol:'image://./imgs/persons/226px-Jan_Tinbergen_1982.jpg'
                             
                         }, 
                         {
                             name: '尼可拉斯·廷贝亨',
                             des: '1973年 生理学或医学奖',
-                            symbol:'image://http://file.caixin.com/datanews/nobel/photo/250px-Lorenz_and_Tinbergen2.jpg',
+                            symbol:'image://./imgs/persons/250px-Lorenz_and_Tinbergen2.jpg',
                             symbolSize: 60,
                             category:1
                         }
